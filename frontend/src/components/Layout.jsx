@@ -13,6 +13,21 @@ const Layout = () => {
         { path: '/extract', label: 'Paper Extraction', icon: FileLock },
     ];
 
+    // Get web login role from localStorage
+    const webRole = typeof window !== 'undefined' ? localStorage.getItem('userRole') : null;
+
+    // Filter nav items - hide upload for Printer and Moderator
+    const filteredNavItems = navItems.filter(item => {
+        if (item.path === '/upload') {
+            // Hide upload page for Printer and Moderator (case-insensitive)
+            const lowerRole = (webRole || '').toLowerCase();
+            if (lowerRole === 'printer' || lowerRole === 'moderator') {
+                return false;
+            }
+        }
+        return true;
+    });
+
     return (
         <div className="flex h-screen bg-dark text-gray-100 font-sans selection:bg-blue-500/30">
             {/* Sidebar */}
@@ -25,7 +40,7 @@ const Layout = () => {
                 </div>
 
                 <nav className="flex-1 p-4 space-y-2">
-                    {navItems.map((item) => {
+                    {filteredNavItems.map((item) => {
                         const Icon = item.icon;
                         const isActive = location.pathname === item.path;
 
