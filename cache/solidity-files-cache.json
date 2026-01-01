@@ -1,0 +1,75 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\vijay\\.gemini\\antigravity\\scratch\\secure-exam-system\\contracts\\ExamPaperRegistry.sol": {
+      "lastModificationDate": 1767270350815,
+      "contentHash": "0cf71a64792d4703ddc3c6ee5d0b5d9b",
+      "sourceName": "contracts/ExamPaperRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ExamPaperRegistry"
+      ]
+    },
+    "C:\\Users\\vijay\\.gemini\\antigravity\\scratch\\secure-exam-system\\node_modules\\hardhat\\console.sol": {
+      "lastModificationDate": 1766981728798,
+      "contentHash": "681c532e816169606d13a5fe8b475074",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    }
+  }
+}

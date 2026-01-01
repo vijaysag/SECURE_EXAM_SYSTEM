@@ -1,0 +1,308 @@
+{
+  "address": "0xb7278A61aa25c888815aFC32Ad3cC52fF24fE575",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "paperId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum ExamPaperRegistry.PaperStatus",
+          "name": "status",
+          "type": "uint8"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "moderator",
+          "type": "address"
+        }
+      ],
+      "name": "PaperStatusUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "paperId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "uploader",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "paperHash",
+          "type": "string"
+        }
+      ],
+      "name": "PaperUploaded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum ExamPaperRegistry.Role",
+          "name": "role",
+          "type": "uint8"
+        }
+      ],
+      "name": "UserRoleUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_paperId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPaper",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "ipfsHash",
+              "type": "string"
+            },
+            {
+              "internalType": "address",
+              "name": "uploader",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "uploadTime",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum ExamPaperRegistry.PaperStatus",
+              "name": "status",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "approver",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "approvalTime",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ExamPaperRegistry.Paper",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "hashToId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "paperCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "papers",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "ipfsHash",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "uploader",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "uploadTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum ExamPaperRegistry.PaperStatus",
+          "name": "status",
+          "type": "uint8"
+        },
+        {
+          "internalType": "address",
+          "name": "approver",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "approvalTime",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_paperId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "reviewPaper",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "enum ExamPaperRegistry.Role",
+          "name": "_role",
+          "type": "uint8"
+        }
+      ],
+      "name": "setUserRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_paperHash",
+          "type": "string"
+        }
+      ],
+      "name": "uploadPaper",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userRoles",
+      "outputs": [
+        {
+          "internalType": "enum ExamPaperRegistry.Role",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_paperHash",
+          "type": "string"
+        }
+      ],
+      "name": "verifyPaper",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "exists",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "paperId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
